@@ -1,0 +1,93 @@
+.overlay_background {
+  position: fixed;
+  background-color: #000000ab;
+  min-height: 100vh;
+  min-width: 100vw;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+
+
+.container_modal {
+  position: absolute;
+  background-color: white;
+  color: #333333;
+  border-radius: 12px;
+  min-width: 620px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1.5em 2em;
+}
+/* Modal add new photo */
+.title_modal {
+  font-size: 1.7em;
+  font-weight: lighter;
+  margin: 0 0 1em 0;
+}
+.container_input_modal > label {
+  display: block;
+  margin: 1.2em 0 .8em 0;
+  color: #4f4f4f;
+  font-size: 1em;
+}
+.container_input_modal > input {
+  border-radius: 12px;
+  font-size: 1em;
+  width: 100%;
+  padding: 1em;
+  border: none;
+  outline: 2px solid rgba(0, 0, 0, 0.342);
+}
+.container_input_modal > input:placeholder {
+  color: #bdbdbd;
+  font-weight: lighter;
+}
+.container_buttons {
+  margin: 1.8em 0 0 0;
+  text-align: end;
+}
+.container_buttons > button {
+  cursor: pointer;
+  border: none;
+  width: 105px;
+  height: 55px;
+  border-radius: 12px;
+  font-size: 1em;
+}
+
+.btn_cancel {
+  background: none;
+  margin: 0 1em;
+  color: #BDBDBD;
+}
+.btn_cancel:hover{
+    color: #949494;
+}
+.btn_cancel:active{
+    color: #636161;
+}
+.btn_submit {
+  background-color: #3db46d;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0px 1px 6px 0px #0000001A;
+}
+.btn_submit:hover {
+  background-color: rgb(48, 170, 97);
+}
+.btn_submit:active {
+  background-color: rgb(39, 143, 81);
+}
+.delete {
+  background-color:#EB5757;
+}
+.delete:hover {
+  background-color: #df4f4f;
+}
+.delete:active {
+  background-color: #d84f4f;
+}
+
+
