@@ -5,29 +5,34 @@ import errorImage from '../../assets/error.png'
 import loadingImage from '../../assets/loading.gif'
 
 interface Props {
-    src:string;
-    onClick:React.Dispatch<React.SetStateAction<boolean>>
+    url:string;
+    id:string;
+    label:string;
+    setIdImage:React.Dispatch<React.SetStateAction<string>>;
+    setModal: React.Dispatch<React.SetStateAction<boolean>>
 }
 
-export const ImageThumbnail = ({src,onClick}:Props) => {
+export const ImageThumbnail = ({url,id,label, setIdImage,setModal }:Props) => {
 
     console.log('imgafe')
-
+    
     const handleDeleteImg = () => {
-        onClick(()=>true); 
+        console.log({id})
+        setModal(()=>true)
+        setIdImage(id);
     };
 
     return (
         <div className="container_img">
             <Img
                 placeholder={loadingImage}
-                src={src}
+                src={url}
                 error={errorImage}
-                alt={src}
+                alt={url}
             />
 
             <div className="overlay_img">
-                <label htmlFor="" title="Lorem ipsum dolor sit amet.">Lorem ipsum dolor sit amet.</label>
+                <label htmlFor="" className="label_img" title="Lorem ipsum dolor sit amet.">{label}</label>
                 <button className="btn_delete" onClick={handleDeleteImg}>delete</button>
             </div>
 

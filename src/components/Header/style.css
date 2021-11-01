@@ -60,3 +60,19 @@ header {
 .btn_search:active {
   background-color: rgb(39, 143, 81);
 }
+
+@media screen and (max-width:700px) {
+  header{
+    flex-direction: column;
+    gap: 2em;
+  }
+
+  .container_logo_input{
+    flex-direction: column;
+    gap: 2em;
+    width: 100%;
+  }
+  .container_input{
+    width: 100%;
+  }
+}

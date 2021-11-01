@@ -1,12 +1,15 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from 'react';
+import { DataContext } from '../context/dataContext';
 
 export const useDebounce = (value:string, delay:number) => {
      // State and setters for debounced value
+     const { setLoading} = useContext(DataContext)
      const [debouncedValue, setDebouncedValue] = useState(value);
 
      useEffect(
        () => {
          // Update debounced value after delay
+         setLoading(true)
          const handler = setTimeout(() => {
            setDebouncedValue(value);
          }, delay);

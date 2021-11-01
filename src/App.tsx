@@ -1,6 +1,8 @@
 import { HomePage } from "./pages/HomePage"
 
 import './index.css'
+import { DataProvider } from './context/dataContext';
+import { ModalProvider } from "./context/modalContext";
 
 const App = () => {
   return (
@@ -14,9 +16,11 @@ const App = () => {
 
 const AppState: React.FC = ({ children }) => {
   return (
-    <>
+    <DataProvider>
+      <ModalProvider>
       {children}
-    </>
+      </ModalProvider>
+    </DataProvider>
   )
 };
 

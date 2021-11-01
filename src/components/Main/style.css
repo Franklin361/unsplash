@@ -1,10 +1,17 @@
-.container_gallery{
-    column-count: 3;
-    column-gap: 1.5em;
-    margin: 2em 0 5em 0;
-    min-height: 100vh;
-}
-
+.my-masonry-grid {
+    display: -webkit-box; /* Not needed if autoprefixing */
+    display: -ms-flexbox; /* Not needed if autoprefixing */
+    display: flex;
+    margin-left: -30px; /* gutter size offset */
+    width: auto;
+    margin-bottom: 2em;
+    margin-top: 2em;
+  }
+  .my-masonry-grid_column {
+    padding-left: 30px; /* gutter size */
+    background-clip: padding-box;
+  }
+  
 .container_img{
     border-radius: 16px;
     position: relative;
@@ -38,11 +45,12 @@
 .container_img:hover > .overlay_img{
     opacity: 1;
 }
-label{
+.label_img{
     color:white;
     font-size: 1.5em;
     font-weight: normal;
-    margin-bottom: 1em;
+    position: absolute;
+    left: 1em;
 }
 
 .btn_delete{
@@ -64,4 +72,36 @@ label{
 .btn_delete:hover{
     background-color: #EB5757;
     color: white;
+}
+
+
+.container_nodata{
+    width: 100%;
+    position: absolute;
+    /* background-color: rebeccapurple; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.container_nodata>span{
+    font-size: 2.5em;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-decoration: underline;
+    color: rgba(155, 155, 155, 0.747);
+    display: block;
+    margin-top: -1em;
+}
+.container_nodata>div{
+    width: 20em;
+    height: 20em;
+    overflow: hidden;
+    border-radius: 100%;
+    margin: auto;
+}
+.container_nodata>div>img{
+    /* width: 100%; */
+    /* height: 100%; */
+    object-fit: cover;
 }
