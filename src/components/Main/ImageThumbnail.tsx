@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Img from "react-cool-img";
+// import Img from "react-cool-img";
 import errorImage from '../../assets/error.png'
 import loadingImage from '../../assets/loading.gif'
 
@@ -24,13 +24,13 @@ export const ImageThumbnail = ({url,id,label, setIdImage,setModal }:Props) => {
 
     return (
         <div className="container_img">
-            <Img
+            {/* <Img
                 placeholder={loadingImage}
                 src={url}
                 error={errorImage}
                 alt={url}
-            />
-
+            /> */}
+            <img src={url} alt={url} />
             <div className="overlay_img">
                 <label htmlFor="" className="label_img" title="Lorem ipsum dolor sit amet.">{label}</label>
                 <button className="btn_delete" onClick={handleDeleteImg}>delete</button>
